@@ -22,13 +22,13 @@ Or install it yourself as:
 
 ### Rails with RSpec and Capybara
 
-Follow following convention:
+Follow this convention:
 
 1. Put your page object files in one of the following directories:
 
-* `spec/features/pages/`
-* `spec/features/support/pages/`
-* `spec/pages/`
+  * `spec/features/pages/`
+  * `spec/features/support/pages/`
+  * `spec/pages/`
 
 2. Keep one page object per file
 3. `HomePage` class should be defined in `home_page.rb` file
