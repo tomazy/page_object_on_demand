@@ -20,18 +20,18 @@ Or install it yourself as:
 
 ## Usage
 
-### Rails with Rspec and Capybara
+### Rails with RSpec and Capybara
 
 Follow following convention:
 
 1. Put your page object files in one of the following directories:
 
-  * `spec/features/pages/`
-  * `spec/features/support/pages/`
-  * `spec/pages/`
+* `spec/features/pages/`
+* `spec/features/support/pages/`
+* `spec/pages/`
 
-1. Keep one page object per file
-1. `HomePage` class should be defined in `home_page.rb` file
+2. Keep one page object per file
+3. `HomePage` class should be defined in `home_page.rb` file
 
 ```ruby
 # spec/features/pages/home_page.rb
@@ -59,7 +59,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/page_object_on_demand. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/tomazy/page_object_on_demand. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](contributor-covenant.org) code of conduct.
 
 
 ## License
