@@ -1,15 +1,13 @@
 # PageObjectOnDemand
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/page_object_on_demand`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+*I will create page objects for you when you need them*
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'page_object_on_demand'
+gem 'page_object_on_demand', groups: [:test]
 ```
 
 And then execute:
@@ -22,7 +20,36 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+### Rails with Rspec and Capybara
+
+Follow following convention:
+
+1. Put your page object files in one of the following directories:
+
+  * `spec/features/pages/`
+  * `spec/features/support/pages/`
+  * `spec/pages/`
+
+1. Keep one page object per file
+1. `HomePage` class should be defined in `home_page.rb` file
+
+```ruby
+# spec/features/pages/home_page.rb
+class HomePage < SitePrism::Page
+  #...
+end
+```
+
+Then you can access your page objects in your test just by calling the base name:
+
+```ruby
+feature "Home page" do
+  scenario 'visit home page' do
+    home_page.load
+    expect(home_page).to be_displayed
+  end
+end
+```
 
 ## Development
 
